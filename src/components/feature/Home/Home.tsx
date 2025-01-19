@@ -7,25 +7,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  Dumbbell,
-  MessageSquare,
-  Calendar,
-  Zap,
-  ArrowRight,
-  Activity,
-  MonitorIcon as Running,
-  Bike,
-} from "lucide-react";
+import { Dumbbell, MessageSquare, Calendar, ArrowRight, Activity, MonitorIcon as Running, Bike } from 'lucide-react';
 import { AnimatedWorkoutIcon } from "./AnimatedWorkoutIcon";
-import { Link } from "react-router-dom";
 
 const LandingPage: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-purple-50 dark:from-blue-900 dark:to-purple-900">
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <AnimatedWorkoutIcon />
               <div className="space-y-2">
@@ -55,11 +45,11 @@ const LandingPage: React.FC = () => {
           id="features"
           className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-800"
         >
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-blue-700 dark:text-blue-300">
               WorkoutPal Features
             </h2>
-            <div className="grid gap-6 lg:grid-cols-3 lg:gap-12">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-12 max-w-5xl mx-auto">
               <Card className="transform transition-all duration-200 hover:scale-105 hover:shadow-lg">
                 <CardHeader>
                   <Calendar className="h-10 w-10 mb-2 text-blue-600 dark:text-blue-400" />
@@ -100,11 +90,11 @@ const LandingPage: React.FC = () => {
           </div>
         </section>
         <section id="workout-types" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-blue-700 dark:text-blue-300">
               Workout Types
             </h2>
-            <div className="grid gap-6 lg:grid-cols-3 lg:gap-12">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-12 max-w-5xl mx-auto">
               <div className="flex flex-col items-center text-center group">
                 <div className="mb-4 rounded-full bg-blue-100 p-3 dark:bg-blue-800 transform transition-all duration-200 group-hover:scale-110 group-hover:shadow-lg">
                   <Running className="h-10 w-10 text-blue-600 dark:text-blue-400" />
@@ -142,50 +132,52 @@ const LandingPage: React.FC = () => {
           id="get-started"
           className="w-full py-12 md:py-24 lg:py-32 bg-blue-600 dark:bg-blue-800"
         >
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">
                   Ready to Transform Your Fitness?
                 </h2>
                 <p className="mx-auto max-w-[600px] text-blue-100 md:text-xl">
-                  Join the cult of runners, gym-goers, and cyclists who are
+                  Join the community of runners, gym-goers, and cyclists who are
                   already benefiting from AI-powered workout planning and
                   guidance.
                 </p>
               </div>
               <Button className="bg-white text-blue-600 hover:bg-blue-100 transform transition-all duration-200 hover:scale-105 hover:shadow-lg">
                 Start Your Journey Now
-                <ArrowRight className="ml-2 h-4 w-4 animate-bounce" />
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-white dark:bg-gray-800">
-        <p className="text-xs text-gray-500 dark:text-gray-400">
-          © 2024 WorkoutPal AI. All rights reserved.
-        </p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <a
-            className="text-xs hover:underline underline-offset-4 text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
-            href="#"
-          >
-            Terms of Service
-          </a>
-          <a
-            className="text-xs hover:underline underline-offset-4 text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
-            href="#"
-          >
-            Privacy Policy
-          </a>
-          <a
-            className="text-xs hover:underline underline-offset-4 text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
-            href="#"
-          >
-            Contact Us
-          </a>
-        </nav>
+      <footer className="w-full py-6 px-4 md:px-6 border-t bg-white dark:bg-gray-800">
+        <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
+          <p className="text-xs text-gray-500 dark:text-gray-400 mb-4 sm:mb-0">
+            © 2024 WorkoutPal AI. All rights reserved.
+          </p>
+          <nav className="flex gap-4 sm:gap-6">
+            <a
+              className="text-xs hover:underline underline-offset-4 text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
+              href="#"
+            >
+              Terms of Service
+            </a>
+            <a
+              className="text-xs hover:underline underline-offset-4 text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
+              href="#"
+            >
+              Privacy Policy
+            </a>
+            <a
+              className="text-xs hover:underline underline-offset-4 text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
+              href="#"
+            >
+              Contact Us
+            </a>
+          </nav>
+        </div>
       </footer>
     </div>
   );
