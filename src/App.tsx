@@ -2,6 +2,8 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import LandingPage from "./components/feature/Home/Home";
 import Features from "./components/feature/Home/Features";
 import NavBar from "./Layout/Nav";
+import LoginPage from "./components/feature/Home/Login";
+import Footer from "./Layout/Footer";
 // import Login from './pages/auth/Login'
 // import SignUp from './pages/auth/SignUp'
 // import Chat from './pages/Chat'
@@ -31,6 +33,7 @@ const App = () => {
         {/* Public Routes */}
 
         <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/features" element={<Features />} />
         {/* Auth Routes */}
         <Route path="/auth">
@@ -47,6 +50,7 @@ const App = () => {
         {/* Catch all - 404 */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      <Footer />
     </>
   );
 };

@@ -31,22 +31,22 @@ const NavBar = (React.FC = () => {
       </Link>
       <nav className="ml-auto flex gap-4 sm:gap-6">
         <Link
-          to="/features"
+          to="/"
           className="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400"
         >
-          Features
+          Home
         </Link>
         <a
           className="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400"
-          href="#workout-types"
+          href="/features"
         >
-          Workout Types
+          Features
         </a>
         <a
           className="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400"
-          href="#get-started"
+          href="/login"
         >
-          Get Started
+          Let's Roll
         </a>
       </nav>
     </header>
